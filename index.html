@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lab12.1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .bg-imgl {
+      background-size: cover;
+  background-image: url(https://genk.mediacdn.vn/k:2015/moon-340x227-1429400257135/vi-sao-mat-trang-ten-tieng-anh-co-nghia-la-the-moon.jpg);
+}
+.bg-img2 {
+  background-size: cover;
+  background-image: url(https://img2.thuthuatphanmem.vn/uploads/2019/03/20/hinh-anh-mat-trang-tren-bau-troi_091500717.jpg);
+}
+.bg-img3 {
+  background-size: cover;
+  background-image: url(https://i.pinimg.com/originals/72/56/0d/72560d363bbb7cad655b3d0f0074c6c3.jpg);
+}
+.carousel-item {
+  height: 600px;
+}
+footer {
+  display: block;
+  padding: 10%;
+}
+.back {
+  text-align: end;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-gap: 10px;
+}
+
+.link1 {
+  grid-column: 1 / 1;
+}
+
+  </style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Carousel</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggler="collapse"
+            aria-controls="navbar-collapse"
+            aria-expanded="false"
+            aria-label="toggler-navagation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarcollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-imgl">
+            <div class="carousel-indicator">
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-sline-to="0"
+                class="active"
+                aria-label="sline 1"
+                aria-current="true"
+              ></button>
+
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1>Example headline</h1>
+                  <p>
+                    Some representative placeholder content for the first sline
+                    of the carousel
+                  </p>
+                  <p>
+                    <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item bg-img2">
+            <div class="carousel-indicator">
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-sline-to="1"
+                aria-label="sline 2"
+                class=""
+              ></button>
+              
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Another example headline</h1>
+                  <p>
+                    Some representative placeholder content for the second sline
+                    of the carousel
+                  </p>
+                  <p>
+                    <a class="btn btn-lg btn-primary" href="#">Learn more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item bg-img3">
+            <div class="carousel-indicator">
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-sline-to="2"
+                aria-label="sline 3"
+                class=""
+              ></button>
+              
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1>One more for good measure</h1>
+                  <p>
+                    Some representative placeholder content for the third sline
+                    of the carousel
+                  </p>
+                  <p>
+                    <a class="btn btn-lg btn-primary" href="#"
+                      >Browse gallery</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      </div>
+    </main>
+    <footer>
+      <div class="grid-container">
+        <div class="link1">©2017- 2021 Company,lnc. <a href="#">Privacy</a> <a href="#">Terms</a></div>
+        <div class="link2"><a class="back" href="#">Back to top</a></div>
+      </div>
+  </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
